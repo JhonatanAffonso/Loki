@@ -12,6 +12,22 @@ namespace Loki
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            // Recupera usuario da sessão
+            string usuario = (string)Session["Usuario"];
+
+            // Sessão for invalida
+            if (usuario == null)
+            {
+                Response.Redirect("index.aspx");
+            }
+
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            // Invalida Sessão
+            Session.Abandon();
+            Response.Redirect("index.aspx");
         }
     }
 }
