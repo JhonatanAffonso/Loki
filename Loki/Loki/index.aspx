@@ -3,46 +3,63 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="../css/bootstrap.min.css" rel="stylesheet" id="bootstrapcss" />
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
-    <link href="../css/login.css" rel="stylesheet" />
-    <title>Desenvolvimento Aberto - Login</title>
+<head>
+    <title>Loki</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body>
+<body class="is-preload">
     <div class="container">
-        <div class="card card-container">
-            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-            <p id="profile-name" class="profile-name-card"></p>
-            <span id="reauth-email" class="reauth-email"></span>
-            <h4>Bem Vindo ao Loki</h4>
-            <h4>Login:</h4>
-            <form id="form1" runat="server" class="form-signin">
-                <div>
-                    <asp:Label ID="lblUsuario" runat="server" Text="Usuário:"></asp:Label>
-                    <asp:TextBox ID="txtUsuario" runat="server" class="form-control"></asp:TextBox>
 
-                    <asp:Label ID="lblSenha" runat="server" Text="Senha:"></asp:Label>
-                    <asp:TextBox ID="txtSenha" runat="server" TextMode="Password" class="form-control"></asp:TextBox>
-
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Entrar" />
-                    <div id="remember" class="checkbox">
-                        <label>
-                            <input type="checkbox" value="remember-me" />
-                            Lembre-se de mim
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                        <!-- Header -->
+                        <header id="header">
+                            <h1>Bem vindo ao Loki</h1>
+                            <p>Organize sua coleção de filmes, séries!!!</p>
+                        </header>
+                        <form id="form1" runat="server" class="form-signin">
+                            <div>
+                                <asp:Label ID="lblUsuario" runat="server" Text="Usuário:"></asp:Label>
+                                <asp:TextBox ID="txtUsuario" runat="server" class="form-control"></asp:TextBox>
+                                
+                                <asp:Label ID="lblSenha" runat="server" Text="Senha:"></asp:Label>
+                                <asp:TextBox ID="txtSenha" runat="server" TextMode="Password" class="form-control"></asp:TextBox>
+                                <br />
+                                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Entrar" class="btn-lg"/>
+                                <br />
+                                <br />
+                                <div id="remember" class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="remember-me" />
+                                        Lembre-se de mim
                             <br />
-                            <a href="#" class="forgot-password">Esqueceu a senha?  </a>
-                        </label>
-                    </div>
-                </div>
-            </form>
-            <!-- /form -->
+                                        <a href="#" class="forgot-password">Esqueceu a senha?  </a>
+                                    </label>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>                
+            </div>
         </div>
-        <!-- /card-container -->
-    </div>
-    <!-- /container -->
+        </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="#" class="icon fa-twitter" title="Em Breve Disponível"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon fa-instagram" title="Em Breve Disponível"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon fa-github" title="Em Breve Disponível"><span class="label">GitHub</span></a></li>
+            <li><a href="#" class="icon fa-envelope-o" title="Em Breve Disponível"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; 2018.</li>
+        </ul>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>
