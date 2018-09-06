@@ -10,41 +10,37 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body class="is-preload">
-    <div class="container">
+        <!-- Header -->
+        <header id="header">
+            <h2>Bem vindo ao Loki</h2>
+            <p>Organize sua coleção de filmes, séries!!!</p>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="row">
-                        <!-- Header -->
-                        <header id="header">
-                            <h1>Bem vindo ao Loki</h1>
-                            <p>Organize sua coleção de filmes, séries!!!</p>
-                        </header>
-                        <form id="form1" runat="server" class="form-signin">
-                            <div>
-                                <asp:Label ID="lblUsuario" runat="server" Text="Usuário:"></asp:Label>
-                                <asp:TextBox ID="txtUsuario" runat="server" class="form-control"></asp:TextBox>
-                                
-                                <asp:Label ID="lblSenha" runat="server" Text="Senha:"></asp:Label>
-                                <asp:TextBox ID="txtSenha" runat="server" TextMode="Password" class="form-control"></asp:TextBox>
-                                <br />
-                                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Entrar" class="btn-lg"/>
-                                <br />
-                                <br />
-                                <div id="remember" class="checkbox">
-                                    <label>
-                                        <input type="checkbox" value="remember-me" />
-                                        Lembre-se de mim
+        </header>
+        <section>
+            <form id="form1" runat="server" class="form-signin">
+                <div>
+                    <asp:Label ID="lblUsuario" runat="server" Text="Usuário:"></asp:Label>
+                    <asp:TextBox ID="txtUsuario" runat="server" class="form-control"></asp:TextBox>
+
+                    <asp:Label ID="lblSenha" runat="server" Text="Senha:"></asp:Label>
+                    <asp:TextBox ID="txtSenha" runat="server" TextMode="Password" class="form-control"></asp:TextBox>
+                    <br />
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Entrar" class="btn-lg" />
+                    <br />
+                    <br />
+                    <div id="remember" class="checkbox">
+                        <label>
+                            <input type="checkbox" value="remember-me" />
+                            Lembre-se de mim
+                                            <br />
+                            <a href="#" class="forgot-password">Esqueceu a senha?  </a>
                             <br />
-                                        <a href="#" class="forgot-password">Esqueceu a senha?  </a>
-                                    </label>
-                                    </div>
-                                </div>
-                        </form>
-                    </div>                
-            </div>
-        </div>
-        </div>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </section>
+   
     <!-- Footer -->
     <footer id="footer">
         <ul class="icons">

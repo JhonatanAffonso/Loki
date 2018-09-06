@@ -67,7 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="cadastro.aspx" />
+    <Content Include="cadastroCliente.aspx" />
     <Content Include="Global.asax" />
     <Content Include="index.aspx" />
     <Content Include="Pagamento.aspx" />
@@ -75,12 +75,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cadastro.aspx.cs">
-      <DependentUpon>cadastro.aspx</DependentUpon>
+    <Compile Include="cadastroCliente.aspx.cs">
+      <DependentUpon>cadastroCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cadastro.aspx.designer.cs">
-      <DependentUpon>cadastro.aspx</DependentUpon>
+    <Compile Include="cadastroCliente.aspx.designer.cs">
+      <DependentUpon>cadastroCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
