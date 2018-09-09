@@ -4,26 +4,129 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="js/bootstrap.min.js"></script>
     <title></title>
 </head>
 <body>
+    <div class="container-fluid">
+        <%-- Menu Superior--%>
+        <div class="row">
+            <div class="col-sm-12">
+                ...Menu Superior
+            </div>
+        </div>
+
+        <%-- Linha do Título--%>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="text-center">
+                    <h2>Perfil do Usuário</h2>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
 
 
-<div class="container bootstrap snippet">
+
+        <%-- Menu Lateral--%>
+        <div class="row">
+            <div class="col-sm-2">
+                ...Localização do Menu Lateral
+            </div>
+
+            <%-- Divisão Foto do Perfil--%>
+
+
+            <%-- Divisão Preenchimento dos Dados--%>
+            <div class="col-sm-8">
+                <div class="text-center">
+                    <img src="images/gravatar.png" class="avatarLogin img-thumbnail" alt="avatar" />
+                    <h6>Trocar a foto do perfil...</h6>
+                    <input type="file" class="text-center center-block file-upload" />
+                </div>
+                <br />
+                <br />
+
+                <form id="formDadosCliente" runat="server">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="input-group-prepend">
+                                <asp:Label ID="lblNome" runat="server" Text="Nome:"></asp:Label>
+                                <asp:TextBox ID="txtNome" runat="server" class="form-control" required="true"></asp:TextBox>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="col-sm-4">
+                            <div class="input-group-prepend">
+                                <asp:Label ID="lblCpf" runat="server" Text="Cpf:"></asp:Label>
+                                <asp:TextBox ID="txtCpf" runat="server" class="form-control" required="true" MaxLength="11"></asp:TextBox>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <asp:Label ID="lblEmail" runat="server" Text="E-mail:"></asp:Label>
+                            <asp:TextBox ID="txtEmail" runat="server" class="form-control" required="true" MaxLength="60"></asp:TextBox>
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">@exemplo.com</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="col-sm-2">
+                            <asp:Label ID="lblDdd" runat="server" Text="DDD:"></asp:Label>
+                            <asp:TextBox ID="txtDdd" runat="server" class="form-control" required="true" MaxLength="11"></asp:TextBox>
+                        </div>
+                        <br />
+
+                        <div class="col-sm-3">
+                            <asp:Label ID="lblTelefone" runat="server" Text="Telefone:"></asp:Label>
+                            <asp:TextBox ID="txtTelefone" runat="server" class="form-control" required="true" MaxLength="11"></asp:TextBox>
+                        </div>
+                        <br />
+                    </div>
+                    <br />
+
+                        <asp:Label ID="lblEstado" runat="server" Text="Estado:"></asp:Label>
+                        <asp:TextBox ID="txtEstado" runat="server" class="form-control" required="true" MaxLength="2"></asp:TextBox>
+                    <br />
+
+                        <asp:Label ID="lblCidade" runat="server" Text="Cidade:"></asp:Label>
+                        <asp:TextBox ID="txtCidade" runat="server" class="form-control" required="true" MaxLength="30"></asp:TextBox>
+                    <br />
+
+                    <div class="input-group-prepend">
+                        <asp:Label ID="lblCep" runat="server" Text="Cep:"></asp:Label>
+                        <asp:TextBox ID="txtCep" runat="server" class="form-control" required="true" MaxLength="9"></asp:TextBox>
+                    </div>
+                    <br />
+
+                    <div class="input-group-prepend">
+                        <asp:Label ID="lblEndereco" runat="server" Text="Endereço:"></asp:Label>
+                        <asp:TextBox ID="txtEndereco" runat="server" class="form-control" required="true" MaxLength="60"></asp:TextBox>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%--<div class="container bootstrap snippet">
     <div class="row">
   		<div class="col-sm-10"><h2>Perfil do Usuário</h2></div>
-    	<div class="col-sm-2"><a href="/users" class="pull-right"><img title="Imagem do Perfil" class="img-circle img-responsive" src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100"></a></div>
+    	<div class="col-sm-2"><a href="/users" class="pull-right"><img title="Imagem do Perfil" class="img-circle img-responsive" src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100" /></a></div>
     </div>
     <div class="row">
   		<div class="col-sm-3"><!--left col-->
               
 
       <div class="text-center">
-        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar" /> 
+        <img src="images/gravatar.png" class="avatar img-circle img-thumbnail" alt="avatar" /> 
         <h6>Trocar a foto do perfil...</h6>
         <input type="file" class="text-center center-block file-upload" />
       </div><br />
@@ -90,13 +193,13 @@
                           
                           <div class="col-xs-6">
                               <label for="password"><h4>Senha</h4></label>
-                              <input type="password" class="form-control" name="password" id="password" placeholder="senha" title="insira sua senha.">
+                              <input type="password" class="form-control" name="password" id="password" placeholder="senha" title="insira sua senha." />
                           </div>
                       </div>
     
                       <div class="form-group">
                            <div class="col-xs-12">
-                                <br>
+                                <br />
                               	<button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Salvar</button>
                                	<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Limpar</button>
                             </div>
@@ -111,7 +214,6 @@
 
         </div><!--/col-9-->
     </div><!--/row-->
-
-
+    --%>
 </body>
 </html>

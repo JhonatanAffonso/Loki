@@ -1,11 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*
+.imgLogin{
+    width: 600px;
+    height: 450px;
+}
+*/
+
 
 .imgLogin{
     width: 70%;
 }
 
 .divisaoImg{
-	padding: 50px;
+	margin: 40px;
 }

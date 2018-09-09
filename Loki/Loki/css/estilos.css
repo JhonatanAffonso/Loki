@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+.margemPagina{
+    margin: 20px;
+}
+
+.avatarLogin{
+    width: 150px;
+    height: 151px;
+}

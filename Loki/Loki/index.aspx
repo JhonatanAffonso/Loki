@@ -3,44 +3,57 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Loki</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<head runat="server">
+    <meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=0, user-scalable=no" charset="utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="css/estilosLogin.css" />
+
+    <title></title>
 </head>
 <body class="is-preload">
-        <!-- Header -->
-        <header id="header">
-            <h2>Bem vindo ao Loki</h2>
-            <p>Organize sua coleção de filmes, séries!!!</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
 
-        </header>
-        <section>
-            <form id="form1" runat="server" class="form-signin">
-                <div>
-                    <asp:Label ID="lblUsuario" runat="server" Text="Usuário:"></asp:Label>
-                    <asp:TextBox ID="txtUsuario" runat="server" class="form-control"></asp:TextBox>
-
-                    <asp:Label ID="lblSenha" runat="server" Text="Senha:"></asp:Label>
-                    <asp:TextBox ID="txtSenha" runat="server" TextMode="Password" class="form-control"></asp:TextBox>
-                    <br />
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Entrar" class="btn-lg" />
-                    <br />
-                    <br />
-                    <div id="remember" class="checkbox">
-                        <label>
-                            <input type="checkbox" value="remember-me" />
-                            Lembre-se de mim
+                <!-- Header -->
+                <header id="header">
+                    <h2>Bem vindo ao Loki</h2>
+                    <p>Organize sua coleção de filmes, séries!!!</p>
+                </header>
+                <!-- Signup Form -->
+                <div class="col-md-10">
+                    <form id="form1" runat="server" class="signup-form">
+                        <asp:Label ID="lblUsuario" runat="server" Text="Usuário:"></asp:Label>
+                        <asp:TextBox ID="txtUsuario" runat="server" class="form-control"></asp:TextBox>
+                        <asp:Label ID="lblSenha" runat="server" Text="Senha:"></asp:Label>
+                        <asp:TextBox ID="txtSenha" runat="server" TextMode="Password" class="form-control"></asp:TextBox>
+                        <br />
+                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Entrar" class="btn-lg" />
+                        <br />
+                        <br />
+                        <div id="remember" class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me" />
+                                Lembre-se de mim
                                             <br />
-                            <a href="#" class="forgot-password">Esqueceu a senha?  </a>
-                            <br />
-                        </label>
-                    </div>
+                                <a href="#" class="forgot-password">Esqueceu a senha?  </a>
+                                <br />
+                            </label>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </section>
-   
+            </div>
+
+            <div class="col-md-6">
+                <div class="divisaoImg">
+                    <img src="images\MuralLogin.jpg" class="imgLogin " alt="Mural Fotos Séries" />
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer id="footer">
         <ul class="icons">
@@ -56,6 +69,5 @@
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
-
 </body>
 </html>
