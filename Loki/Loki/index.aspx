@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=0, user-scalable=no" charset="utf-8" />
+    <meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1, user-scalable=no" charset="utf-8" />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/bootstrap-min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -48,7 +48,7 @@
 
             <div class="col-md-6">
                 <div class="divisaoImg">
-                    <img src="images\MuralLogin.jpg" class="imgLogin " alt="Mural Fotos Séries" />
+                    <img src="images\MuralLogin.png" class="imgLogin" alt="Mural Fotos Séries" />
                 </div>
             </div>
         </div>
