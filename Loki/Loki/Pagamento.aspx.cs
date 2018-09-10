@@ -19,8 +19,8 @@ namespace Loki
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
-            //Response.Write("<script language='javascript'>alert('Ae Carai');</script>");
-            //SqlCommand command = new SqlCommand()
+            Response.Write("<script language='javascript'>alert('Ae Carai');</script>");
+            //SqlCommand command = new SqlCommand();
         }
 
         protected void btnLimpar_Click(object sender, EventArgs e)
