@@ -19,12 +19,10 @@ namespace Loki
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            // Recupera elementos do formulario
+
             string usuario = Request.Form["txtUsuario"];
             string senha = Request.Form["txtSenha"];
 
-            // Neste exercicio usuario e senhas são fixos
-            // Estes dados geralmente estão associados a um banco de dados
             if (usuario.Equals("adm") && senha.Equals("1234"))
             {
                 Session["Usuario"] = usuario;

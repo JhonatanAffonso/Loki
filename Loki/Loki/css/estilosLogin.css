@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 
 /*
@@ -11,6 +11,14 @@
 
 .imgLogin{
     width: 95%;
+    z-index: inherit 1;
+    filter:grayscale(0%);
+}
+
+.imgLogin:hover{
+    width: 95%;
+    z-index: inherit 21;
+    filter:grayscale(100%);
 }
 
 .divisaoImg{
