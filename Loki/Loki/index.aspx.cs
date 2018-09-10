@@ -15,7 +15,7 @@ namespace Loki
 
         }
 
-        //SqlConnection con = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;User ID=Keila;Initial Catalog=loki;Data Source=.");
+        SqlConnection con = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;User ID=Keila;Initial Catalog=loki;Data Source=.");
 
         protected void Button1_Click(object sender, EventArgs e)
         {

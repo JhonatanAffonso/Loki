@@ -16,5 +16,19 @@ namespace Loki
         }
 
         SqlConnection con = new SqlConnection();
+
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
+            Response.Write("<script language='javascript'>alert('Ae Carai');</script>");
+            //SqlCommand command = new SqlCommand();
+        }
+
+        protected void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtNumCartao.Text = "";
+            txtNome.Text = "";
+            txtValidade.Text = "";
+            txtCodSeguranca.Text = "";
+        }
     }
 }
