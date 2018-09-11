@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pagamento.aspx.cs" Inherits="Loki.PagamentoDois" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pagamento.aspx.cs" Inherits="Loki.pagamento" %>
 
 <!DOCTYPE html>
 
@@ -13,13 +13,15 @@
     <form id="form1" runat="server">
         <div>
 
+            <% string usuario = (string)Session["Usuario"];
+                Response.Write(usuario); %>%>
+
 
             <asp:RadioButtonList ID="rdoValor" runat="server">
-                <asp:ListItem>R$ 10</asp:ListItem>
-                <asp:ListItem>R$ 25</asp:ListItem>
-                <asp:ListItem>R$ 50</asp:ListItem>
-                <asp:ListItem>R$ 100</asp:ListItem>
-                <asp:ListItem>Outro Valor</asp:ListItem>
+                <asp:ListItem Value="10">R$ 10</asp:ListItem>
+                <asp:ListItem Value="25">R$ 25</asp:ListItem>
+                <asp:ListItem Value="50">R$ 50</asp:ListItem>
+                <asp:ListItem Value="100">R$ 100</asp:ListItem>
             </asp:RadioButtonList>
             <br />
             <asp:Label ID="lblNumCartao" runat="server" Text="Numero do Cartão"></asp:Label><br />
@@ -27,11 +29,11 @@
             <br />
             <br />
             <asp:Label ID="lblValidade" runat="server" Text="Validade do Cartão"></asp:Label><br />
-            <asp:TextBox ID="txtValidade" runat="server" class="form-control" required ="true"></asp:TextBox>
+            <asp:TextBox ID="txtValidade" runat="server" MaxLength="5" class="form-control" required ="true"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="lblNome" runat="server" Text="Nome Impresso"></asp:Label><br />
-            <asp:TextBox ID="txtNome" runat="server" class="form-control" required ="true"></asp:TextBox>
+            <asp:TextBox ID="txtNome" runat="server" MaxLength="60" class="form-control" required ="true"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="lblCodSeguranca" runat="server" Text="Codigo de Segurança"></asp:Label><br />
@@ -43,5 +45,6 @@
             <asp:Button ID="btnLimpar" runat="server" OnClick="btnLimpar_Click" Text="Limpar" />
         </div>
     </form>
+    
 </body>
 </html>

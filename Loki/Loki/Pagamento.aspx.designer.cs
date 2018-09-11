@@ -10,7 +10,7 @@
 namespace Loki {
     
     
-    public partial class PagamentoDois {
+    public partial class pagamento {
         
         /// <summary>
         /// Controle form1.

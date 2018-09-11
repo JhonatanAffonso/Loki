@@ -29,5 +29,10 @@ namespace Loki
             Session.Abandon();
             Response.Redirect("index.aspx");
         }
+
+        protected void btnPagamento_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("pagamento.aspx");
+        }
     }
 }

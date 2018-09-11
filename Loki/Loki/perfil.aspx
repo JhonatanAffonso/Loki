@@ -15,9 +15,11 @@
            <% string usuario = (string)Session["Usuario"];
                Response.Write("Bem Vindo: " + usuario); %>
            <br />
-           <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Sair</asp:LinkButton>
+           <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Sair</asp:LinkButton><br />
+
        </div>
     </div>
+        <asp:Button ID="btnPagamento" runat="server" OnClick="btnPagamento_Click" Text="Pagamento" />
     </form>
 
 
