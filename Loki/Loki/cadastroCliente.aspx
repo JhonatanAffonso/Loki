@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/estilos.css" />
     <script src="js/bootstrap.min.js"></script>
@@ -53,7 +54,7 @@
 
                 <form id="formDadosCliente" runat="server">
                     <div class="row">
-                        <div class="col-sm-8">
+                        <div class="col-sm-7">
                             <asp:Label ID="lblNome" runat="server" Text="Nome:"></asp:Label>
                             <asp:TextBox ID="txtNome" runat="server" class="form-control" required="true"></asp:TextBox>
                         </div>
@@ -118,19 +119,31 @@
                             <asp:TextBox ID="txtEndereco" runat="server" class="form-control" required="true" MaxLength="60"></asp:TextBox>
                         </div>
                         <br />
-
                         <div class="col-sm-2">
                             <asp:Label ID="lblNumero" runat="server" Text="Número:"></asp:Label>
                             <asp:TextBox ID="txtNumero" runat="server" class="form-control" required="true" MaxLength="6"></asp:TextBox>
                         </div>
                         <br />
-
                         <div class="col-sm-3">
                             <asp:Label ID="lblComplemento" runat="server" Text="Complemento:"></asp:Label>
-                            <asp:TextBox ID="txtComplemento" runat="server" class="form-control" required="true" MaxLength="6"></asp:TextBox>
+                            <asp:TextBox ID="txtComplemento" runat="server" class="form-control" required="true" MaxLength="20"></asp:TextBox>
                         </div>
-                        <br />
+                    </div>
+                    <br />
 
+                    <div class="text-center">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <br />
+                                <asp:Label ID="lblUsuario" runat="server" Text=" Seu Usuário será seu endereço de e-mail completo."></asp:Label>
+                               
+                            </div>
+                            <br />
+                            <div class="col-sm-4">
+                                <asp:Label ID="lblSenha" runat="server" Text="Senha:"></asp:Label>
+                                <asp:TextBox ID="txtSenha" runat="server" class="form-control" required="true" MaxLength="8"></asp:TextBox>
+                            </div>
+                        </div>
                     </div>
 
                     <br />
@@ -139,7 +152,7 @@
                         <div class="col-sm-12">
                             <div class="text-center">
                                 <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" OnClick="btnCadastrar_Click" />
-                                <asp:Button ID="btnLimpar" runat="server" Text="Limpar" />
+                                <asp:Button ID="btnLimpar" runat="server" Text="Limpar" OnClick="btnLimpar_Click" />
                             </div>
                         </div>
                     </div>
@@ -148,18 +161,54 @@
         </div>
     </div>
 
-
+    <br />
+    <br />
     <!-- Footer -->
-    <footer id="footer">
-        <ul class="icons">
-            <li><a href="#" class="icon fa-twitter" title="Em Breve Disponível"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon fa-instagram" title="Em Breve Disponível"><span class="label">Instagram</span></a></li>
-            <li><a href="#" class="icon fa-github" title="Em Breve Disponível"><span class="label">GitHub</span></a></li>
-            <li><a href="#" class="icon fa-envelope-o" title="Em Breve Disponível"><span class="label">Email</span></a></li>
-        </ul>
-        <ul class="copyright">
-            <li>&copy; 2018.</li>
-        </ul>
+    <footer class="page-footer font-small teal pt-4">
+
+        <!-- Footer Text -->
+        <div class="container-fluid text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
+                    <p>Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo,</p>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none pb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mb-md-0 mb-3">
+
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
+                    <p>Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, Exemplo, </p>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Text -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © 2018 Copyright:
+      <a href="#">Loki.com.br</a>
+        </div>
+        <!-- Copyright -->
+
     </footer>
+    <!-- Footer -->
+
 </body>
 </html>
