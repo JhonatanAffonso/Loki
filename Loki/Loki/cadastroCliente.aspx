@@ -131,19 +131,20 @@
                     </div>
                     <br />
 
-                    <div class="text-center">
+                    
                         <div class="row">
-                            <div class="col-sm-7">
-                                <br />
-                                <asp:Label ID="lblUsuario" runat="server" Text=" Seu Usuário será seu endereço de e-mail completo."></asp:Label>
-                               
+                            <div class="col-sm-4">
+                                <asp:Label ID="lblUsuario" runat="server" Text="Usuário: "></asp:Label>
+                                <asp:TextBox ID="txtUsuario" runat="server" class="form-control" required="true" MaxLength="12"></asp:TextBox>
+                               <ul>
+                                   <li>O Usuário pode ter até 12 caracteres</li>
+                               </ul>
                             </div>
                             <br />
                             <div class="col-sm-4">
                                 <asp:Label ID="lblSenha" runat="server" Text="Senha:"></asp:Label>
-                                <asp:TextBox ID="txtSenha" runat="server" class="form-control" required="true" MaxLength="8"></asp:TextBox>
-                            </div>
-                        </div>
+                                <asp:TextBox ID="txtSenha"  runat="server" class="form-control" required="true" MaxLength="8" TextMode="Password"></asp:TextBox>
+                            </div>                        
                     </div>
 
                     <br />

@@ -19,20 +19,41 @@ namespace Loki
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
             string usuario = Request.Form["txtUsuario"];
             string senha = Request.Form["txtSenha"];
-
-            if (usuario.Equals("adm") && senha.Equals("1234"))
+            
+            SqlCommand cmd = new SqlCommand("select count(1) from t_acesso where usuario = @login and senha = @senha", con);
+            cmd.Parameters.AddWithValue("@login", usuario);
+            cmd.Parameters.AddWithValue("@senha", senha);
+            con.Open();
+            if (cmd.ExecuteScalar().ToString() == "1")
             {
                 Session["Usuario"] = usuario;
-                Response.Redirect("perfil.aspx");
+                   Response.Redirect("perfil.aspx");
             }
             else
             {
                 Response.Write("<script>alert('Usuário ou Senha Inválidos!Digite novamente!');</script>");
-                Response.Redirect("index.aspx");
+                   Response.Redirect("index.aspx");
             }
+            con.Close();
+
+
+
+
+            //string usuario = Request.Form["txtUsuario"];
+            //string senha = Request.Form["txtSenha"];
+            
+            //if (usuario.Equals("adm") && senha.Equals("1234"))
+            //{
+            //    Session["Usuario"] = usuario;
+            //    Response.Redirect("perfil.aspx");
+            //}
+            //else
+            //{
+            //    Response.Write("<script>alert('Usuário ou Senha Inválidos!Digite novamente!');</script>");
+            //    Response.Redirect("index.aspx");
+            //}
 
         }
     }

@@ -24,7 +24,7 @@ namespace Loki
 
                 SqlCommand command = new SqlCommand("insert into t_pessoa (nomePessoa, cpf, estado, cidade, cep, endereco, numero, complemento, email, situacao) values ('" + txtNome.Text + "', '" + txtCpf.Text + "', '" + txtEstado.Text + "', '" + txtCidade.Text + "', '" + txtCep.Text + "', '" + txtEndereco.Text + "', '" + txtNumero.Text + "', '" + txtComplemento.Text + "', '" + txtComplemento.Text + "', '" + txtSituacao.Text + "')", con);
                 SqlCommand command2 = new SqlCommand("insert into t_telefone(ddd, telefone, F_idPessoa) values (" + txtDdd.Text + "," + txtTelefone.Text + ",(select max(pes.idPessoa) from t_pessoa pes))", con);
-                SqlCommand command3 = new SqlCommand("insert into t_acesso(usuario, senha, F_idPessoa) values ('" + txtEmail.Text + "', '" + txtSenha.Text + "', (select max(pes.idPessoa) from t_pessoa pes))", con);
+                SqlCommand command3 = new SqlCommand("insert into t_acesso(usuario, senha, F_idPessoa) values ('" + txtUsuario.Text + "', '" + txtSenha.Text + "', (select max(pes.idPessoa) from t_pessoa pes))", con);
                 SqlCommand command4 = new SqlCommand("insert into t_cliente(F_idPessoa) values ((select max(pes.idPessoa) from t_pessoa pes))", con);
 
                 con.Open();
