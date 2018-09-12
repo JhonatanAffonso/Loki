@@ -13,10 +13,6 @@
     <form id="form1" runat="server">
         <div>
 
-            <% string usuario = (string)Session["Usuario"];
-                Response.Write(usuario); %>
-
-
             <asp:RadioButtonList ID="rdoValor" runat="server">
                 <asp:ListItem Value="10">R$ 10</asp:ListItem>
                 <asp:ListItem Value="25">R$ 25</asp:ListItem>

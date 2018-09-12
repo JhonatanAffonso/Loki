@@ -29,7 +29,6 @@ namespace Loki
         }
 
         SqlConnection con = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=loki;Data Source=.");
-        public Int32 idPessoa;
 
         protected void PuxarUsuario()
         {
@@ -37,7 +36,7 @@ namespace Loki
             SqlCommand cmd = new SqlCommand("select F_idPessoa from t_acesso where usuario = '" + Session["Usuario"] + "';", con);
 
             con.Open();
-            idPessoa = Convert.ToInt32(cmd.ExecuteScalar());
+            Int32 idPessoa = Convert.ToInt32(cmd.ExecuteScalar());
             con.Close();
 
         }

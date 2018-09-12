@@ -12,7 +12,7 @@ namespace Loki
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            PuxarUsuario();
         }
 
         //SqlConnection con = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;User ID=Keila;Initial Catalog=loki;Data Source=.");
@@ -40,10 +40,32 @@ namespace Loki
 
         protected void btnLimpar_Click(object sender, EventArgs e)
         {
-            txtNumCartao.Text = "";
-            txtNome.Text = "";
-            txtValidade.Text = "";
-            txtCodSeguranca.Text = "";
+            Limpar(this);
+        }
+
+        protected void PuxarUsuario()
+        {
+            SqlCommand cmd = new SqlCommand("select F_idPessoa from t_acesso where usuario = '" + Session["Usuario"] + "';", con);
+
+            con.Open();
+            Int32 idPessoa = Convert.ToInt32(cmd.ExecuteScalar());
+            con.Close();
+        }
+
+        public void Limpar(Control controle)
+        {
+            foreach (Control ctle in controle.Controls)
+            {
+                if (ctle is TextBox)
+                {
+                    ((TextBox)ctle).Text = string.Empty;
+                }
+                else if (ctle.Controls.Count > 0)
+                {
+                    Limpar(ctle);
+                }
+            }
+
         }
     }
 }
