@@ -19,9 +19,11 @@
 
        </div>
     </div>
-        <asp:Button ID="btnPagamento" runat="server" OnClick="btnPagamento_Click" Text="Pagamento" />
+        <asp:Button ID="btnPagamento" runat="server" OnClick="btnPagamento_Click" Text="Pagamento" /><br />
+       
     </form>
 
 
 </body>
+
 </html>

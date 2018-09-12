@@ -14,7 +14,7 @@
         <div>
 
             <% string usuario = (string)Session["Usuario"];
-                Response.Write(usuario); %>%>
+                Response.Write(usuario); %>
 
 
             <asp:RadioButtonList ID="rdoValor" runat="server">

@@ -12,7 +12,7 @@ namespace Loki
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         //SqlConnection con = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;User ID=Keila;Initial Catalog=loki;Data Source=.");

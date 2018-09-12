@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -21,6 +24,22 @@ namespace Loki
                 Response.Redirect("index.aspx");
             }
 
+            PuxarUsuario();
+
+        }
+
+        SqlConnection con = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=loki;Data Source=.");
+        public Int32 idPessoa;
+
+        protected void PuxarUsuario()
+        {
+
+            SqlCommand cmd = new SqlCommand("select F_idPessoa from t_acesso where usuario = '" + Session["Usuario"] + "';", con);
+
+            con.Open();
+            idPessoa = Convert.ToInt32(cmd.ExecuteScalar());
+            con.Close();
+
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
@@ -34,5 +53,7 @@ namespace Loki
         {
             Response.Redirect("pagamento.aspx");
         }
+
+        
     }
 }
