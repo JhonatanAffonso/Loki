@@ -135,7 +135,7 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <asp:Label ID="lblUsuario" runat="server" Text="Usuário: "></asp:Label>
-                                <asp:TextBox ID="txtUsuario" runat="server" class="form-control" required="true" MaxLength="12"></asp:TextBox>
+                                <asp:TextBox ID="txtUsuario" runat="server" class="form-control" required="true" MaxLength="60" Leave="txtUsuario_Leave"></asp:TextBox>
                                <ul>
                                    <li>O Usuário pode ter até 12 caracteres</li>
                                </ul>
@@ -153,10 +153,12 @@
                         <div class="col-sm-12">
                             <div class="text-center">
                                 <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" OnClick="btnCadastrar_Click" />
-                                <asp:Button ID="btnLimpar" runat="server" Text="Limpar" OnClick="btnLimpar_Click" />
+                                <asp:Button ID="btnLimpar" runat="server" Text="Limpar" OnClick="btnLimpar_Click" />                                
                             </div>
                         </div>
                     </div>
+
+                    <asp:HiddenField ID="hdfIdPessoa" runat="server" />
                 </form>
             </div>
         </div>
