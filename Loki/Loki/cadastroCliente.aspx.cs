@@ -22,7 +22,7 @@ namespace Loki
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand command = new SqlCommand("insert into t_pessoa (nomePessoa, cpf, estado, cidade, cep, endereco, numero, complemento, email, situacao) values ('" + txtNome.Text + "', '" + txtCpf.Text + "', '" + txtEstado.Text + "', '" + txtCidade.Text + "', '" + txtCep.Text + "', '" + txtEndereco.Text + "', '" + txtNumero.Text + "', '" + txtComplemento.Text + "', '" + txtComplemento.Text + "', '" + txtSituacao.Text + "')", con);
+            SqlCommand command = new SqlCommand("insert into t_pessoa (nomePessoa, cpf, estado, cidade, cep, endereco, numero, complemento, email, situacao) values ('" + txtNome.Text + "', '" + txtCpf.Text + "', '" + txtEstado.Text + "', '" + txtCidade.Text + "', '" + txtCep.Text + "', '" + txtEndereco.Text + "', '" + txtNumero.Text + "', '" + txtComplemento.Text + "', '" + txtEmail.Text + "', '" + DpSituacao.Text + "')", con);
             SqlCommand commandMax = new SqlCommand("select max(idPessoa)+1 from t_pessoa", con);
             Int32 idPessoa = (Int32)commandMax.ExecuteScalar();
             SqlCommand command2 = new SqlCommand("insert into t_acesso(usuario, senha, F_idPessoa) values ('" + txtUsuario.Text + "', '" + txtSenha.Text + "', (select max(pes.idPessoa) from t_pessoa pes))", con);
@@ -42,7 +42,7 @@ namespace Loki
             }
             catch (SqlException)
             {                
-                Response.Write("<script>alert('Não foi possível realizar o cadastro. Verifique as informações!');</script>");
+                Response.Write("<script>alert('Não foi possível realizar o cadastro. Verifique os dados e tente novamente!');</script>");
                 SqlCommand command5 = new SqlCommand("delete from t_pessoa where idPessoa = " + idPessoa, con);
                 command5.ExecuteNonQuery();
                 idPessoa = 0;

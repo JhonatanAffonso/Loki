@@ -29,7 +29,7 @@ namespace Loki
             if (cmd.ExecuteScalar().ToString() == "1")
             {
                 Session["Usuario"] = usuario;
-                   Response.Redirect("cadastroCLiente.aspx");
+                   Response.Redirect("perfilUsuario.aspx");
             }
             else
             {

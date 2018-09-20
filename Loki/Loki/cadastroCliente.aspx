@@ -11,12 +11,22 @@
     <script src="js/bootstrap.min.js"></script>
     <title>Cadastro de Perfil</title>
 </head>
-<body>
+<body> 
+
+
     <div class="container-fluid">
         <%-- Menu Superior--%>
         <div class="row">
             <div class="col-sm-12">
                 ...Menu Superior
+                <div class="text-right">
+                    <% string usuario = (string)Session["Usuario"];
+                    Response.Write("Você está logado como: " + usuario);  %>
+
+                  <%-- Encerra a sessão atual
+                 Session.Abandon();  --%>
+
+                </div>
             </div>
         </div>
 
@@ -56,7 +66,7 @@
                     <div class="row">
                         <div class="col-sm-7">
                             <asp:Label ID="lblNome" runat="server" Text="Nome:"></asp:Label>
-                            <asp:TextBox ID="txtNome" runat="server" class="form-control" required="true"></asp:TextBox>
+                            <asp:TextBox ID="txtNome" runat="server" class="form-control" required="true" MaxLength="60"></asp:TextBox>
                         </div>
                         <br />
                         <div class="col-sm-3">
@@ -66,7 +76,11 @@
                         <br />
                         <div class="col-sm-2">
                             <asp:Label ID="lblSituacao" runat="server" Text="Situação:"></asp:Label>
-                            <asp:TextBox ID="txtSituacao" runat="server" class="form-control" required="true" MaxLength="1"></asp:TextBox>
+                            <asp:DropDownList ID="DpSituacao" runat="server" class="form-control" required="true" MaxLength="1">
+                                <asp:ListItem Selected="True">Selecione...</asp:ListItem>
+                                <asp:ListItem Selected="False" Value="A">Ativo</asp:ListItem>
+                                <asp:ListItem Selected="False" Value="I">Inativo</asp:ListItem>
+                            </asp:DropDownList>
                         </div>
                     </div>
                     <br />
@@ -82,7 +96,7 @@
                         <br />
                         <div class="col-sm-2">
                             <asp:Label ID="lblDdd" runat="server" Text="DDD:"></asp:Label>
-                            <asp:TextBox ID="txtDdd" runat="server" class="form-control" required="true" MaxLength="11"></asp:TextBox>
+                            <asp:TextBox ID="txtDdd" runat="server" class="form-control" required="true" MaxLength="2"></asp:TextBox>
                         </div>
                         <br />
 

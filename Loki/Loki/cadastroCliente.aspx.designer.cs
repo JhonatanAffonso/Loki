@@ -67,13 +67,13 @@ namespace Loki {
         protected global::System.Web.UI.WebControls.Label lblSituacao;
         
         /// <summary>
-        /// Controle txtSituacao.
+        /// Controle DpSituacao.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSituacao;
+        protected global::System.Web.UI.WebControls.DropDownList DpSituacao;
         
         /// <summary>
         /// Controle lblEmail.
