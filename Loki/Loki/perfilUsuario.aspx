@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/perfil.css" />
 
     <script src="js/perfil/perfil.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="js/perfil/bootstrapMaterialDesign.js"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="js/perfil/bootstrap-material-design.js"></script>
@@ -47,7 +48,7 @@
                                 <i class="material-icons">layers</i> All Components
                         </a>
 
-                            <a href="http://demos.creative-tim.com/material-kit/docs/2.0/getting-started/introduction.html" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="material-icons">content_paste</i> Documentation
                         </a>
                         </div>
@@ -58,17 +59,17 @@
       					</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://twitter.com/CreativeTim" target="_blank">
+                        <a class="nav-link" href="#" target="_blank">
                             <i class="fa fa-twitter"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.facebook.com/CreativeTim" target="_blank">
+                        <a class="nav-link" href="#" target="_blank">
                             <i class="fa fa-facebook-square"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+                        <a class="nav-link" href="#" target="_blank">
                             <i class="fa fa-instagram"></i>
                         </a>
                     </li>
@@ -77,7 +78,7 @@
         </div>
     </nav>
 
-    <div class="page-header header-filter" data-parallax="true" style="background-image: url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
+    <div class="page-header header-filter" data-parallax="true" style="background-image: url('images/fundoBlack.png');"></div>
     <div class="main main-raised">
         <div class="profile-content">
             <div class="container">
@@ -166,32 +167,28 @@
                     <div class="tab-pane text-center gallery" id="works">
                         <div class="row">
                             <div class="col-md-3 ml-auto">
-                                <img src="https://images.unsplash.com/photo-1524498250077-390f9e378fc0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83079913579babb9d2c94a5941b2e69d&auto=format&fit=crop&w=751&q=80" class="rounded" />
-                                <img src="https://images.unsplash.com/photo-1506667527953-22eca67dd919?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6326214b7ce18d74dde5e88db4a12dd5&auto=format&fit=crop&w=750&q=80" class="rounded" />
-                                <img src="https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec2bdc92a9687b6af5089b335691830e&auto=format&fit=crop&w=750&q=80" class="rounded" />
+                                <img src="images/velozes.jpg" class="rounded" />
+                                <img src="images/velozes.jpg" class="rounded" />
                             </div>
                             <div class="col-md-3 mr-auto">
-                                <img src="https://images.unsplash.com/photo-1504346466600-714572c4b726?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6754ded479383b7e3144de310fa88277&auto=format&fit=crop&w=750&q=80" class="rounded" />
-                                <img src="https://images.unsplash.com/photo-1494028698538-2cd52a400b17?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83bf0e71786922a80c420c17b664a1f5&auto=format&fit=crop&w=334&q=80" class="rounded" />
+                                <img src="images/velozes.jpg" class="rounded" />
+                                <img src="images/velozes.jpg" class="rounded" />
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane text-center gallery" id="favorite">
                         <div class="row">
                             <div class="col-md-3 ml-auto">
-                                <img src="https://images.unsplash.com/photo-1504346466600-714572c4b726?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6754ded479383b7e3144de310fa88277&auto=format&fit=crop&w=750&q=80" class="rounded" />
-                                <img src="https://images.unsplash.com/photo-1494028698538-2cd52a400b17?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83bf0e71786922a80c420c17b664a1f5&auto=format&fit=crop&w=334&q=80" class="rounded" />
+                                <img src="images/It.jpg" class="rounded" />
+                                <img src="images/It.jpg" class="rounded" />
                             </div>
                             <div class="col-md-3 mr-auto">
-                                <img src="https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec2bdc92a9687b6af5089b335691830e&auto=format&fit=crop&w=750&q=80" class="rounded" />
-                                <img src="https://images.unsplash.com/photo-1524498250077-390f9e378fc0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83079913579babb9d2c94a5941b2e69d&auto=format&fit=crop&w=751&q=80" class="rounded" />
-                                <img src="https://images.unsplash.com/photo-1506667527953-22eca67dd919?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6326214b7ce18d74dde5e88db4a12dd5&auto=format&fit=crop&w=750&q=80" class="rounded" />
+                                <img src="images/It.jpg" class="rounded" />
+                                <img src="images/It.jpg" class="rounded" /> 
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>

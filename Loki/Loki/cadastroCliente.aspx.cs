@@ -36,7 +36,7 @@ namespace Loki
                 command3.ExecuteNonQuery();
                 command4.ExecuteNonQuery();                
 
-                Response.Write("<script>alert('Perfil Criado Com Sucesso! Bem vindo Lockier!');</script>");
+                Response.Write("<script>alert('Perfil Criado Com Sucesso! Bem vindo Lockier!');location = 'index.aspx';</script>");
                 idPessoa = 0;
                 Limpar(this);
             }

@@ -36,11 +36,17 @@
                         <div id="remember" class="checkbox">
                             <label>
                                 <input type="checkbox" value="remember-me" />
-                                Lembre-se de mim
-                                            <br />
+                                Lembre-se de mim /
                                 <a href="#" class="forgot-password">Esqueceu a senha?  </a>
                                 <br />
                             </label>
+
+                             <label>
+                                Não tem Cadastro?                            
+                                <a href="cadastroCliente.aspx" class="forgot-password" target="_blank">Cadastre e aproveite =)  </a>
+                                <br />
+                            </label>
+
                         </div>
                     </form>
                 </div>
