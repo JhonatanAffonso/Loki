@@ -22,6 +22,24 @@ namespace Loki {
         protected global::System.Web.UI.HtmlControls.HtmlForm formDadosCliente;
         
         /// <summary>
+        /// Controle FileUploadControl.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadControl;
+        
+        /// <summary>
+        /// Controle StatusLabel.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StatusLabel;
+        
+        /// <summary>
         /// Controle lblNome.
         /// </summary>
         /// <remarks>

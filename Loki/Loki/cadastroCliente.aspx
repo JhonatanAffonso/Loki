@@ -20,8 +20,8 @@
             <div class="col-sm-12">
                 ...Menu Superior
                 <div class="text-right">
-                    <% string usuario = (string)Session["Usuario"];
-                    Response.Write("Você está logado como: " + usuario);  %>
+                   <%-- <% string usuario = (string)Session["Usuario"];
+                    Response.Write("Você está logado como: " + usuario);  %>--%>
 
                   <%-- Encerra a sessão atual
                  Session.Abandon();  --%>
@@ -54,15 +54,23 @@
 
             <%-- Divisão Preenchimento dos Dados--%>
             <div class="col-sm-7">
+                <form id="formDadosCliente" runat="server">
+
                 <div class="text-center">
                     <img src="images/gravatar.png" class="avatarLogin img-thumbnail" alt="avatar" />
-                    <h6>Trocar a foto do perfil...</h6>
-                    <input type="file" class="text-center center-block file-upload" />
+                    <h6>Enviar uma foto ...</h6>
+                   <%-- <input type="file" class="text-center center-block file-upload" /> que eu tinha feito antes --%>
+                     <asp:FileUpload ID="FileUploadControl" runat="server" class="multi" AllowMultiple="True" />
+                    <br />
+                                        <asp:Label runat="server" id="StatusLabel" text=""  ForeColor="Red" />
+                    <br />
+                     <%--<asp:Button ID="btnUpload" runat="server" Text="     Carregar Fotos     "
+                        onclick="btnUpload_Click" BackColor="#CC0000" BorderColor="#CC0000" Font-Bold="True" ForeColor="White" />  --%>
                 </div>
                 <br />
                 <br />
 
-                <form id="formDadosCliente" runat="server">
+                
                     <div class="row">
                         <div class="col-sm-7">
                             <asp:Label ID="lblNome" runat="server" Text="Nome:"></asp:Label>
