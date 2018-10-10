@@ -18,18 +18,31 @@ namespace Loki
         //SqlConnection con = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;User ID=Keila;Initial Catalog=loki;Data Source=.");
         SqlConnection con = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=loki;Data Source=.");
 
+
+        protected int PuxarUsuario()
+        {
+            SqlCommand cmd = new SqlCommand("select F_idPessoa from t_acesso where usuario = '" + Session["Usuario"] + "';", con);
+
+            con.Open();
+            Int32 idPessoa = Convert.ToInt32(cmd.ExecuteScalar());
+            con.Close();
+
+            return idPessoa;
+        }
+
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             // Response.Write("<script language='javascript'>alert('Ae Carai');</script>")
             try
             {
-                SqlCommand command = new SqlCommand("insert into t_pagamento(numeroCartao, validade, nomeImpresso, codigoSeguranca, lokiCoins, F_idCliente)values(" + txtNumCartao.Text + ", '" + txtValidade.Text + "', '" + txtNome.Text + "', '" + txtCodSeguranca.Text + "', " + float.Parse(rdoValor.Text) * 2 + ", 1); ", con);
+                SqlCommand command = new SqlCommand("insert into t_pagamento(numeroCartao, validade, nomeImpresso, codigoSeguranca, lokiCoins, F_idCliente)values(" + txtNumCartao.Text + ", '" + txtValidade.Text + "', '" + txtNome.Text + "', '" + txtCodSeguranca.Text + "', " + float.Parse(rdoValor.Text) * 2 + ", "+ PuxarUsuario() + "); ", con);
 
                 con.Open();
                 command.ExecuteNonQuery();
                 con.Close();
 
                 Response.Write("<script language='javascript'>alert('Loki Coins Adquirido com Sucesso!');</script>");
+                Limpar(this);
             }
             catch (SqlException)
             {
@@ -43,14 +56,7 @@ namespace Loki
             Limpar(this);
         }
 
-        protected void PuxarUsuario()
-        {
-            SqlCommand cmd = new SqlCommand("select F_idPessoa from t_acesso where usuario = '" + Session["Usuario"] + "';", con);
-
-            con.Open();
-            Int32 idPessoa = Convert.ToInt32(cmd.ExecuteScalar());
-            con.Close();
-        }
+        
 
         public void Limpar(Control controle)
         {
