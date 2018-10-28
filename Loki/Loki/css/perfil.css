@@ -29,7 +29,7 @@
 
     .navbar.navbar-transparent {
         z-index: 1030;
-        background-color: transparent !important;
+        background-color: #555 !important;
         box-shadow: none !important;
         padding-top: 25px;
         color: #fff;

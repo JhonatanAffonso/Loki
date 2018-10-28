@@ -1,5 +1,5 @@
 // JavaScript Document
 
 function mudandoCorDaNav() {
-    document.getElementById("sectionsNav").style.backgroundColor = white;
+    document.getElementById("sectionsNav").style.backgroundColor = black;
 }
