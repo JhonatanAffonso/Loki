@@ -31,7 +31,7 @@
 </head>
 <body class="profile-page">
     <form id="form1" runat="server">
-        <nav class="navbar fixed-top navbar-expand-lg " <%-- navbar-transparent navbar-color-on-scroll --%>  <%--onscroll="mudandoCorDaNav()"--%> <%--color-on-scroll="100"--%> id="sectionsNav">
+        <nav class="navbar fixed-top navbar-expand-lg " <%-- navbar-transparent navbar-color-on-scroll --%> <%--onscroll="mudandoCorDaNav()"--%> <%--color-on-scroll="100"--%> id="sectionsNav">
             <div class="container">
 
                 <div class="navbar-translate">
@@ -118,8 +118,19 @@
                             <div class="col-md-4">
                                 <div class="card-box">
                                     <div class="card-title">
-                                        <h2>Séries Assistidas</h2>
-                                        <p>Você já asistiu à  ....  Séries.</p>
+                                        <h2>Capítulos Assistidos</h2>
+                                        <br />
+                                        <asp:GridView ID="gvContarSeries" runat="server" AutoGenerateColumns="False" Class="table">
+                                            <Columns>
+                                                <asp:BoundField DataField="Qtd" HeaderText="Você já asistiu à " />
+                                                <asp:BoundField DataField="F_IdPessoa" Visible="False" />
+                                            </Columns>
+                                        </asp:GridView>
+                                        <br />
+
+                                        <p>Capitulos(s).</p>
+                                        <br />
+                                        <br />
                                     </div>
                                     <div class="card-link">
                                         <a href="#" class="c-link">Learn More
@@ -209,7 +220,7 @@
                         <div class="tab-pane active text-center gallery" id="studio">
                             <div class="row">
                                 <div class="col-md-11 ml-auto">
-                                    <asp:GridView ID="gvListarCatalogoCliente" runat="server" AutoGenerateColumns="False">
+                                    <asp:GridView ID="gvListarCatalogoCliente" runat="server" AutoGenerateColumns="False" OnRowCommand="gvListarCatalogoCliente_RowCommand">
                                         <Columns>
                                             <asp:BoundField DataField="idCatalClientes" HeaderText="Código Visual" Visible="False" />
                                             <asp:BoundField DataField="F_IdPessoa" HeaderText="Código Pessoa" Visible="False" />
@@ -219,9 +230,12 @@
                                             <asp:BoundField DataField="IdAssistidoCatal" HeaderText="Assistido?" />
                                             <asp:ButtonField CommandName="update" HeaderText="Visualizar" Text="Editar" />
                                             <asp:ImageField DataImageUrlField="Foto" HeaderText="Imagem" Visible="False"></asp:ImageField>
+                                            <asp:HyperLinkField HeaderText="Ver Capitulos" NavigateUrl="cadastroCliente.aspx?idCliente=1" Text="Ir" />
                                         </Columns>
                                     </asp:GridView>
 
+
+                                
 
                                     <br />
                                     <br />

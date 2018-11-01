@@ -31,6 +31,15 @@ namespace Loki {
         protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
         
         /// <summary>
+        /// Controle gvContarSeries.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvContarSeries;
+        
+        /// <summary>
         /// Controle gvContarFilmes.
         /// </summary>
         /// <remarks>

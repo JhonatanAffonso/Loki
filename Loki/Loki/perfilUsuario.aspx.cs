@@ -28,6 +28,7 @@ namespace Loki
             ListarFilmeCliente();
             ListarCatalogos();
             ContarFilmes();
+            ContarSeries();
         }
 
         SqlConnection con = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=loki;Data Source=.");
@@ -115,5 +116,22 @@ namespace Loki
             gvContarFilmes.DataSource = dt;
             gvContarFilmes.DataBind();
         }
+
+        public void ContarSeries()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select * from ContarSeries where F_IdPessoa = " + PuxarUsuario(), con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            gvContarSeries.DataSource = dt;
+            gvContarSeries.DataBind();
+        }
+
+        protected void gvListarCatalogoCliente_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            //int idCLiente = int.Parse(gvListarCatalogoCliente.Rows[e.RowIndex].Cells[0].Text);
+            Response.Redirect("cadastroCliente.aspx?idCliente=" + PuxarUsuario() + "");
+        }
+
+
     }
 }
