@@ -132,12 +132,12 @@
                                         <br />
                                         <br />
                                     </div>
-                                    <div class="card-link">
+                                   <%-- <div class="card-link">
                                         <a href="#" class="c-link">Learn More
                            
                                             <i class="fa fa-angle-right"></i>
                                         </a>
-                                    </div>
+                                    </div>--%>
                                 </div>
                             </div>
 
@@ -158,11 +158,11 @@
                                         <br />
                                         <br />
                                     </div>
-                                    <div class="card-link">
+<%--                                    <div class="card-link">
                                         <a href="#" class="c-link">Learn More                        
                                             <i class="fa fa-angle-right"></i>
                                         </a>
-                                    </div>
+                                    </div>--%>
                                 </div>
                             </div>
 
@@ -220,17 +220,17 @@
                         <div class="tab-pane active text-center gallery" id="studio">
                             <div class="row">
                                 <div class="col-md-11 ml-auto">
-                                    <asp:GridView ID="gvListarCatalogoCliente" runat="server" AutoGenerateColumns="False" OnRowCommand="gvListarCatalogoCliente_RowCommand">
+                                    <asp:GridView ID="gvListarCatalogoCliente" runat="server" AutoGenerateColumns="False" OnRowUpdating="gvListarCatalogoCliente_RowUpdating">
                                         <Columns>
+                                            <asp:BoundField DataField="F_IdCatalogo" HeaderText="Código Catalogo" Visible="True" />
                                             <asp:BoundField DataField="idCatalClientes" HeaderText="Código Visual" Visible="False" />
                                             <asp:BoundField DataField="F_IdPessoa" HeaderText="Código Pessoa" Visible="False" />
-                                            <asp:BoundField DataField="F_IdCatalogo" HeaderText="Código Catalogo" Visible="False" />
                                             <asp:BoundField DataField="Titulo" HeaderText="Título" />
                                             <asp:BoundField DataField="Descricao" HeaderText="Descrição" />
                                             <asp:BoundField DataField="IdAssistidoCatal" HeaderText="Assistido?" />
                                             <asp:ButtonField CommandName="update" HeaderText="Visualizar" Text="Editar" />
                                             <asp:ImageField DataImageUrlField="Foto" HeaderText="Imagem" Visible="False"></asp:ImageField>
-                                            <asp:HyperLinkField HeaderText="Ver Capitulos" NavigateUrl="cadastroCliente.aspx?idCliente=1" Text="Ir" />
+                                            <asp:ButtonField CommandName="update" HeaderText="Capitulos" Text="Ir"/>
                                         </Columns>
                                     </asp:GridView>
 

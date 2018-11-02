@@ -68,8 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cadastroCliente.aspx" />
+    <Content Include="cadastroFilme.aspx" />
+    <Content Include="cadastroSerie.aspx" />
     <Content Include="Global.asax" />
     <Content Include="index.aspx" />
+    <Content Include="listaCapitulos.aspx" />
     <Content Include="pagamento.aspx" />
     <Content Include="perfil.aspx" />
     <Content Include="perfilUsuario.aspx" />
@@ -84,6 +87,20 @@
     <Compile Include="cadastroCliente.aspx.designer.cs">
       <DependentUpon>cadastroCliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="cadastroFilme.aspx.cs">
+      <DependentUpon>cadastroFilme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cadastroFilme.aspx.designer.cs">
+      <DependentUpon>cadastroFilme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cadastroSerie.aspx.cs">
+      <DependentUpon>cadastroSerie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cadastroSerie.aspx.designer.cs">
+      <DependentUpon>cadastroSerie.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -93,6 +110,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listaCapitulos.aspx.cs">
+      <DependentUpon>listaCapitulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listaCapitulos.aspx.designer.cs">
+      <DependentUpon>listaCapitulos.aspx</DependentUpon>
     </Compile>
     <Compile Include="pagamento.aspx.cs">
       <DependentUpon>pagamento.aspx</DependentUpon>

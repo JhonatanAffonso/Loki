@@ -117,6 +117,7 @@ namespace Loki
             gvContarFilmes.DataBind();
         }
 
+
         public void ContarSeries()
         {
             SqlDataAdapter da = new SqlDataAdapter("select * from ContarSeries where F_IdPessoa = " + PuxarUsuario(), con);
@@ -125,13 +126,11 @@ namespace Loki
             gvContarSeries.DataSource = dt;
             gvContarSeries.DataBind();
         }
+      
 
-        protected void gvListarCatalogoCliente_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void gvListarCatalogoCliente_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            //int idCLiente = int.Parse(gvListarCatalogoCliente.Rows[e.RowIndex].Cells[0].Text);
-            Response.Redirect("cadastroCliente.aspx?idCliente=" + PuxarUsuario() + "");
+            Response.Redirect("listarCapitulo.aspx?idCliente=" + PuxarUsuario() + "?idCatalogo=" + gvListarCatalogoCliente.Rows[e.RowIndex].Cells[0].Text + "");
         }
-
-
     }
 }
