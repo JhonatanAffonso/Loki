@@ -23,13 +23,23 @@ namespace Loki
             string senha = Request.Form["txtSenha"];
             
             SqlCommand cmd = new SqlCommand("select count(1) from t_acesso where usuario = @login and senha = @senha", con);
+            SqlCommand cmd2 = new SqlCommand("select usuario from t_acesso where usuario = @login and senha = @senha", con);
             cmd.Parameters.AddWithValue("@login", usuario);
             cmd.Parameters.AddWithValue("@senha", senha);
+            cmd2.Parameters.AddWithValue("@login", usuario);
+            cmd2.Parameters.AddWithValue("@senha", senha);
             con.Open();
             if (cmd.ExecuteScalar().ToString() == "1")
             {
-                Session["Usuario"] = usuario;
-                   Response.Redirect("perfilUsuario.aspx");
+                if (cmd2.ExecuteScalar().ToString() == "adm@loki.com.br") {
+                    Session["Usuario"] = usuario;
+                    Response.Redirect("cadastroFilme.aspx");
+                }
+                else
+                {
+                    Session["Usuario"] = usuario;
+                    Response.Redirect("perfilUsuario.aspx");
+                }
             }
             else
             {

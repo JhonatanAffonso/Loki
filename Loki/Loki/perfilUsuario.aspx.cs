@@ -130,7 +130,7 @@ namespace Loki
 
         protected void gvListarCatalogoCliente_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            Response.Redirect("listarCapitulo.aspx?idCliente=" + PuxarUsuario() + "?idCatalogo=" + gvListarCatalogoCliente.Rows[e.RowIndex].Cells[0].Text + "");
+            Response.Redirect("listaCapitulos.aspx?idCliente=" + PuxarUsuario() + "?idCatalogo=" + gvListarCatalogoCliente.Rows[e.RowIndex].Cells[0].Text + "");
         }
     }
 }

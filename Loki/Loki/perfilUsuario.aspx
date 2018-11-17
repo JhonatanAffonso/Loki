@@ -177,6 +177,8 @@
                                         <div class="card-body">
                                             <h6 class="card-category text-gray">Renovar Assinatura</h6>
                                             <asp:Button ID="Button1" runat="server" OnClick="btnPagamento_Click" Text="Pagamento" />
+
+                                            <a href="cadastroFilme.aspx"> Teste</a>
                                             <br />
                                             <br />
                                         </div>

@@ -10,8 +10,48 @@
     height: 151px;
 }
 
-/* Footer */
 
+.contagem{
+    font-weight: 24px;
+    font-style: bold;
+    color: #fff;
+    border: 0px;
+}
+
+.contagem table {
+    border: 0px;
+    background: transparent;
+}
+
+.contagemDois {
+    font-weight: 18px;
+    font-style: bold;
+    color: #fff;
+    border: 0px;
+}
+
+.contagemDois table {
+    border: 0px;
+    background: transparent;
+}
+
+.overflowPersol {
+    max-height:400px;
+    overflow-y:auto;
+    border: 2px #000;
+}
+
+.logoLoki {
+    width: 80%;
+    
+}
+
+.bg-card-persol {
+    background-color:blueviolet;
+}
+
+
+/* Footer */
 #footer {
     -moz-transition: opacity 0.5s ease-in-out;
     -webkit-transition: opacity 0.5s ease-in-out;
@@ -161,3 +201,12 @@ ul {
     .icon > .label {
         display: none;
     }
+
+ 
+    
+    #parallaxBar{
+        height:750px;
+        background-color:#004c82;
+        background: url(images/bgparallax.png) 50% 0 fixed;
+        position: relative; 
+    }    
