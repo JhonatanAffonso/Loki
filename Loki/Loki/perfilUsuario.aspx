@@ -11,6 +11,7 @@
     <link href="css/estilo_home.css" rel="stylesheet" />
     <link href="css/home2.css" rel="stylesheet" />
 
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
@@ -177,8 +178,9 @@
                                         <div class="card-body">
                                             <h6 class="card-category text-gray">Renovar Assinatura</h6>
                                             <asp:Button ID="Button1" runat="server" OnClick="btnPagamento_Click" Text="Pagamento" />
-
-                                            <a href="cadastroFilme.aspx"> Teste</a>
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-money"></i>
+                                            </div>
                                             <br />
                                             <br />
                                         </div>

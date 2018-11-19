@@ -22,6 +22,15 @@ namespace Loki {
         protected global::System.Web.UI.HtmlControls.HtmlForm formCadastroFilme;
         
         /// <summary>
+        /// Controle btnSair2.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnSair2;
+        
+        /// <summary>
         /// Controle btnSair.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace Loki {
         protected global::System.Web.UI.WebControls.LinkButton btnSair;
         
         /// <summary>
+        /// Controle LinkButton1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        
+        /// <summary>
         /// Controle gvContarFilmesGeral.
         /// </summary>
         /// <remarks>
@@ -38,6 +56,15 @@ namespace Loki {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvContarFilmesGeral;
+        
+        /// <summary>
+        /// Controle gvContarSeriesGeral.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvContarSeriesGeral;
         
         /// <summary>
         /// Controle gvContarGenero.

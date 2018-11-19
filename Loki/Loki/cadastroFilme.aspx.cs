@@ -18,6 +18,8 @@ namespace Loki
             ListarFilmesGeral();
             ListarFilmesRecentes();
             ContarGenero();
+            ContarSeriesGeral();
+            ListarGenero();
         }
 
         SqlConnection con = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=loki;Data Source=.");
@@ -34,6 +36,15 @@ namespace Loki
             da.Fill(dt);
             gvContarFilmesGeral.DataSource = dt;
             gvContarFilmesGeral.DataBind();
+        }
+
+        public void ContarSeriesGeral()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select * from ContarSeriesGeral", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            gvContarSeriesGeral.DataSource = dt;
+            gvContarSeriesGeral.DataBind();
         }
 
         public void ContarClientesGeral()
@@ -70,6 +81,21 @@ namespace Loki
             da.Fill(dt);
             gvListarFilmesRecentes.DataSource = dt;
             gvListarFilmesRecentes.DataBind();
+        }
+
+        public void ListarGenero()
+        {
+
+            SqlDataAdapter da = new SqlDataAdapter("select * from t_genero order by Genero", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            dpGeneroFilme.DataValueField = "idGenero";
+            dpGeneroFilme.DataTextField = "Genero";
+            dpGeneroFilme.DataSource = dt;
+            dpGeneroFilme.DataBind();
+
+            dpGeneroFilme.Items.Insert(0, "Selecione...");
         }
 
         protected void Sair_Click(object sender, EventArgs e)

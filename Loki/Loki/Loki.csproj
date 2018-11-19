@@ -67,11 +67,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CadastroCapitulosSerie.aspx" />
     <Content Include="cadastroCliente.aspx" />
     <Content Include="cadastroFilme.aspx" />
     <Content Include="cadastroSerie.aspx" />
     <Content Include="Global.asax" />
     <Content Include="index.aspx" />
+    <Content Include="indexAdm.aspx" />
     <Content Include="listaCapitulos.aspx" />
     <Content Include="pagamento.aspx" />
     <Content Include="perfil.aspx" />
@@ -80,6 +82,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroCapitulosSerie.aspx.cs">
+      <DependentUpon>CadastroCapitulosSerie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroCapitulosSerie.aspx.designer.cs">
+      <DependentUpon>CadastroCapitulosSerie.aspx</DependentUpon>
+    </Compile>
     <Compile Include="cadastroCliente.aspx.cs">
       <DependentUpon>cadastroCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -110,6 +119,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="indexAdm.aspx.cs">
+      <DependentUpon>indexAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="indexAdm.aspx.designer.cs">
+      <DependentUpon>indexAdm.aspx</DependentUpon>
     </Compile>
     <Compile Include="listaCapitulos.aspx.cs">
       <DependentUpon>listaCapitulos.aspx</DependentUpon>

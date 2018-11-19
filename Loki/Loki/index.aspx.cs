@@ -33,7 +33,7 @@ namespace Loki
             {
                 if (cmd2.ExecuteScalar().ToString() == "adm@loki.com.br") {
                     Session["Usuario"] = usuario;
-                    Response.Redirect("cadastroFilme.aspx");
+                    Response.Redirect("indexAdm.aspx");
                 }
                 else
                 {

@@ -3257,9 +3257,9 @@ section {
 }
 
 .au-card--bg-violet {
-    background-image: -moz-linear-gradient(90deg, #db39fc 0%, #2948ff 100%);
-    background-image: -webkit-linear-gradient(90deg, #9e39fc 0%, #2948ff 100%);
-    background-image: -ms-linear-gradient(90deg, #a439fc 0%, #2948ff 100%);
+    background-image: -moz-linear-gradient(90deg, #7b358f 0%, #7b358f 100%);
+    background-image: -webkit-linear-gradient(90deg, #7b358f 0%, #7b358f 100%);
+    background-image: -ms-linear-gradient(90deg, #7e3397 0%, #7e3397 100%);
 }
 
 .au-card-top-countries {
